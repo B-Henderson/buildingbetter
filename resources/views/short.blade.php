@@ -9,9 +9,25 @@
 	<link rel="author" href="humans.txt">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 	<link rel="stylesheet" href="{{ URL::to('css/global.css')}}">
+	<style>
+	html, body{
+		height: 100%;
+	}
+	body{
+		display:flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.columns{
+		flex-direction: column;
+
+	}
+
+</style>
 </head>
 <body>
-	<div class="container">
+	<div class="columns is-desktop is-vcentered">
+
 		<h1 class="title">Shortern a URL</h1>
 
 		@if($errors->has('url'))
@@ -33,6 +49,7 @@
 				</div>
 			</div>
 		</form>
+
 	</div>
 	<script src="js/main.js"></script>
 </body>
