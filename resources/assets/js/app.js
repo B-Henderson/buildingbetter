@@ -12,8 +12,13 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import Hero from './components/hero';
+
 const app = new Vue({
-	el: '#app'
+	el: '#app',
+	components: {
+		Hero
+	}
 });
 
 // Bulma NavBar Burger Script

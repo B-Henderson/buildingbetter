@@ -14,11 +14,17 @@ let mix = require('laravel-mix');
 const src = 'resources/assets/js/app.js';
 const output = 'public/js';
 
+mix.disableSuccessNotifications();
+
 mix
 	.js(src, output)
 	.extract(['vue', 'axios'])
-	.sass('resources/assets/sass/app.scss', 'public/css');
+	.sass('resources/assets/sass/app.scss', 'public/css')
+	.sourceMaps();
 
 if (mix.config.production) {
 	mix.version();
 }
+
+//TODO:: cache vendors
+//TODO:: split css
