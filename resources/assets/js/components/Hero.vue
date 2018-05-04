@@ -1,12 +1,13 @@
 
 <template>
-   <section class="hero is-fullheight">
+   <section class="hero is-fullheight has-text-centered">
 
    	<div class="cross-image"></div>
    	<div class="image2"></div>
   <div class="hero-body">
   	
     <div class="container hero-container">
+    	<div class="columns is-centered"><div class="column">
       <h1 class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile has-text-weight-bold">
         BH
       </h1>
@@ -16,11 +17,12 @@
       <h2 class="subtitle is-size-2-desktop ">
         Hi, I’m Ben. I like to build web stuff, take a look.
       </h2>
-      	
+      
+      	</div></div>
     </div>
 
   </div>
-  <font-awesome-icon icon="arrow-down" class="bounce"/>
+<font-awesome-icon icon="arrow-down" class="bounce"/>  
 </section>
 </template>
 <style scoped lang="scss">
@@ -40,6 +42,7 @@
 
 .bounce {
 	animation: bounce 1s infinite;
+	align-self: center;
 }
 
 .fa-arrow-alt-circle-down {
@@ -47,29 +50,25 @@
 }
 .hero-container {
 	z-index: 15;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	.title {
-		color: $color2;
-		font-family: 'Pacifico', cursive;
-	}
-	.subtitle {
-		font-family: 'Ubuntu', sans-serif;
-		color: $color2;
-		max-width: 800px;
-		align-self: center;
-	}
 }
-.svg-inline--fa {
+.title {
 	color: $color2;
-	z-index: 999;
-	font-size: 1.75rem;
+	font-family: 'Pacifico', cursive;
+}
+.subtitle {
+	font-family: 'Ubuntu', sans-serif;
+	color: $color2;
 	align-self: center;
 }
+.svg-inline--fa {
+	color: $color5;
+	z-index: 999;
+	font-size: 1.75rem;
+}
+
 .image2 {
 	background-image: url('../../images/sublime.png');
-	background-position: right;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	filter: blur(6px);
@@ -82,7 +81,7 @@
 	min-height: 100vh;
 	min-width: 100vw;
 	background-image: url('../../images/2ae43ea27645bbe9cbb7c1a4262caf63.png');
-	background-position: left;
+	background-position: unset;
 	background-repeat: no-repeat;
 	background-size: cover;
 	clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 100%);
@@ -91,24 +90,37 @@
 }
 .face-image {
 	img {
-		height: auto;
-		width: 300px;
-		border: 0.5rem solid $color1;
 		border-radius: 500px;
+		border: 0.5rem solid $color1;
 	}
-
-	align-self: center;
-
-	margin: 130px 0;
+	height: auto;
+	width: 225px;
+	margin: 40px auto;
 }
-@media only screen and (max-width: $fullhd) {
-	.hero-container {
-		.title {
-		}
-		.subtitle {
-		}
-		.face-image {
-			margin: 40px 0;
+@media only screen and (min-width: $tablet) and (min-height: 570px) {
+	* {
+		border: solid 1px red;
+	}
+	.title {
+	}
+	.subtitle {
+	}
+	.face-image {
+		width: 300px;
+		margin: 4px auto;
+	}
+}
+@media only screen and (max-height: 450px) {
+	.cross-image,
+	.image2 {
+		display: none;
+	}
+	.hero {
+		background-color: $color1;
+	}
+	.face-image {
+		img {
+			border: 0.5rem solid $color2;
 		}
 	}
 }
