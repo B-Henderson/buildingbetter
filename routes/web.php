@@ -12,19 +12,19 @@
  */
 
 Route::get('/', array(
-    'as'   => 'dashboard',
+    'as' => 'dashboard',
     'uses' => 'DashboardController@index',
 ));
 
 Route::get('/shortner', array(
-    'as'   => 'short',
+    'as' => 'short',
     'uses' => 'ShortController@index',
 ));
 Route::post('/shortner/make', array(
-    'as'   => 'make',
+    'as' => 'make',
     'uses' => 'LinkController@make',
 ));
 Route::get('/shortner/{code}', array(
-    'as'   => 'get',
+    'as' => 'get',
     'uses' => 'LinkController@get',
 ));

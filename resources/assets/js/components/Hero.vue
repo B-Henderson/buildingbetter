@@ -39,6 +39,9 @@
 		transform: translateY(0);
 	}
 }
+.hero {
+	box-shadow: inset 0 0 300px #000000;
+}
 
 .bounce {
 	animation: bounce 1s infinite;
@@ -61,7 +64,7 @@
 	align-self: center;
 }
 .svg-inline--fa {
-	color: $color5;
+	color: $color2;
 	z-index: 999;
 	font-size: 1.75rem;
 }
@@ -98,9 +101,6 @@
 	margin: 40px auto;
 }
 @media only screen and (min-width: $tablet) and (min-height: 570px) {
-	* {
-		border: solid 1px red;
-	}
 	.title {
 	}
 	.subtitle {

@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-window.Vue = require('vue');
+window.Vue = require("vue");
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -12,38 +12,38 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import Hero from './components/hero';
+import Hero from "./components/hero";
 
 const app = new Vue({
-	el: '#app',
-	components: {
-		Hero
-	}
+  el: "#app",
+  components: {
+    Hero
+  }
 });
 
 // Bulma NavBar Burger Script
-document.addEventListener('DOMContentLoaded', function() {
-	// Get all "navbar-burger" elements
-	const $navbarBurgers = Array.prototype.slice.call(
-		document.querySelectorAll('.navbar-burger'),
-		0
-	);
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(
+    document.querySelectorAll(".navbar-burger"),
+    0
+  );
 
-	// Check if there are any navbar burgers
-	if ($navbarBurgers.length > 0) {
-		// Add a click event on each of them
-		$navbarBurgers.forEach(function($el) {
-			$el.addEventListener('click', function() {
-				// Get the target from the "data-target" attribute
-				let target = $el.dataset.target;
-				let $target = document.getElementById(target);
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function($el) {
+      $el.addEventListener("click", function() {
+        // Get the target from the "data-target" attribute
+        let target = $el.dataset.target;
+        let $target = document.getElementById(target);
 
-				// Toggle the class on both the "navbar-burger" and the "navbar-menu"
-				$el.classList.toggle('is-active');
-				$target.classList.toggle('is-active');
-			});
-		});
-	}
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle("is-active");
+        $target.classList.toggle("is-active");
+      });
+    });
+  }
 });
 
-require('./bulma-extensions');
+require("./bulma-extensions");

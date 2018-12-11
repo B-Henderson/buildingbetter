@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="">
@@ -10,6 +11,7 @@
 
 	<link rel="author" href="humans.txt">
 </head>
+
 <body>
 	<div id="app">
 		<Hero></Hero>
@@ -19,4 +21,5 @@
 	<script src="{{ mix('js/app.js') }}"></script>
 
 </body>
+
 </html>

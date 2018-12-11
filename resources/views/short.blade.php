@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="">
@@ -10,21 +11,24 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 	<link rel="stylesheet" href="{{ URL::to('css/global.css')}}">
 	<style>
-	html, body{
-		height: 100%;
-	}
-	body{
-		display:flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.columns{
-		flex-direction: column;
+		html,
+		body {
+			height: 100%;
+		}
 
-	}
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-</style>
+		.columns {
+			flex-direction: column;
+
+		}
+	</style>
 </head>
+
 <body>
 	<div class="columns is-desktop is-vcentered">
 
@@ -32,9 +36,7 @@
 
 		@if($errors->has('url'))
 		<p>{{$errors->first('url')}}</p>
-		@endif
-
-		@if(Session::has('global'))
+		@endif @if(Session::has('global'))
 		<p>{!! Session::get('global') !!}</p>
 
 		@endif
@@ -42,7 +44,8 @@
 			{{ csrf_field() }}
 			<div class="field has-addons">
 				<div class="control is-expanded">
-					<input class=" input is-medium is-info" type="url" placeholder="Input Url" name="url" {{(Request::old('url')) ? 'value='. Request::old('url') . '' : ''}}>
+					<input class=" input is-medium is-info" type="url" placeholder="Input Url" name="url" {{(Request::old( 'url')) ? 'value='.
+					 Request::old( 'url') . '' : ''}}>
 				</div>
 				<div class="control">
 					<input type="submit" class="button is-link is-medium" value="Shorten">
@@ -53,4 +56,5 @@
 	</div>
 	<script src="js/main.js"></script>
 </body>
+
 </html>
